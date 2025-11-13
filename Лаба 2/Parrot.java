@@ -1,0 +1,28 @@
+class Parrot extends Animal {
+    private boolean canTalk;
+
+    public Parrot() {
+        super();
+        this.canTalk = true;
+    }
+
+    public Parrot(String name, int age, String color, boolean canTalk) {
+        super(name, age, color);
+        this.canTalk = canTalk;
+    }
+
+    @Override
+    public void makeSound() {
+        if (canTalk) { System.out.println(name + " говорит: 'привет!'"); } 
+        else { System.out.println(name + " щебечет"); }
+    }
+    
+    @Override
+    public void showInfo() {
+        System.out.println("Имя: " + name + ", Возраст: " + age + ", Цвет: " + color +
+                ", Говорящий: " + canTalk);
+    }
+    
+    public boolean getTalk() { return canTalk; }
+    public void setTalk(boolean canTalk) { this.canTalk=canTalk; }
+}
